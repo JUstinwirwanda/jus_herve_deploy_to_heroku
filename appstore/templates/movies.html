@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        fieldset{
+            background-color: blue;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add movies</title>
+</head>
+
+<body><fieldset style="width:0px"><legend><p>Enter movies</p></legend>
+    <p>
+        <a href="/home/">home</a>
+    </p>
+    <form action="record/" method="post" enctype="multipart/form-data">
+        {% csrf_token %} title: <input type="text" name="title"><br>
+        <label for="">release_date: <input type="date" name="release_date"></label><br>
+        <label for="">main actor : <input type="text" name="main_actor"></label><br>
+        <label for="">genre: <input type="text" name="genre"></label><br>
+        <label for="">movies: <input type="file" name="movies"></label><br>
+        <label for="">thumbnail : <input type="file" name="thumbnail"></label><br>
+        <label for="">description <textarea name="description" id="" cols="30" rows="10"></textarea></label>
+        <label for=""> <input type="hidden" name="user_id" value="1"></label><br>
+        <label for=""><input type="submit" name="submit"></label><br>
+    </form></fieldset>
+</body>
+</html>
